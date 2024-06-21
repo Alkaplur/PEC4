@@ -40,6 +40,10 @@ El proyecto contiene un módulo principal denominado `main.py` que realiza las l
 6. **mapas_Coropleticos.py**:
     - Incluye un análisis gráfico usando mapas coropléticos. Los resultados de permisos, `handguns` y `longguns` se generan en tres archivos HTML.
 
+7. **test.py**
+
+    - Incluye una bateria de test para los modulos 1 y 2, Este modulo se ejeucta de forma independiente al main.py
+
 ### Ejecución
 
 Para ejecutar el proyecto, simplemente corre el módulo `main.py`:
@@ -48,5 +52,5 @@ Para ejecutar el proyecto, simplemente corre el módulo `main.py`:
 python main.py
 
 
-## Instalación
+## Contacto
 dnogueras@uoc.edu
