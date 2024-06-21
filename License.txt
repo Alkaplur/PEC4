@@ -1,7 +1,7 @@
 
 MIT License
 
-Derechos de Autor (c) [2024] [estudiante@uoc.edu]
+Derechos de Autor (c) [2024] [dnogueras@uoc.edu]
 
 Por la presente se concede permiso, sin cargo, a cualquier persona que obtenga una copia de este software y archivos
 de documentación asociados (el "Software"), para tratar en el Software sin restricciones, incluidos, entre otros,
