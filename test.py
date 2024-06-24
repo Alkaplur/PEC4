@@ -4,6 +4,7 @@ from data_handling import read_csv, clean_csv, rename_col
 from data_processing import breakdown_date,erase_month
 
 
+# Clase para hacer el setup que se use en todas las pruebas
 class BaseSetupforTest(unittest.TestCase):
 
     def setUp(self):
@@ -26,6 +27,7 @@ class BaseSetupforTest(unittest.TestCase):
         self.df_removed = erase_month(self.df_divided)
 
 
+# Pruebo la carga de datos
 class SetupforDataHandling(BaseSetupforTest):
 
     def test_read_csv(self):
@@ -36,6 +38,7 @@ class SetupforDataHandling(BaseSetupforTest):
         pd.testing.assert_frame_equal(df_result, self.df)
 
 
+# Pruebo las columnas tras la limpieza de datos
 class SetupforTestCleanCSV(BaseSetupforTest):
 
     def test_clean_csv(self):
@@ -47,6 +50,7 @@ class SetupforTestCleanCSV(BaseSetupforTest):
         self.assertEqual(actual_columns, expected_columns)
 
 
+# Pruebo que se han renombrado correctamete
 class SetupforTestRenameCol(BaseSetupforTest):
 
     def test_rename_col(self):
@@ -58,6 +62,7 @@ class SetupforTestRenameCol(BaseSetupforTest):
         self.assertEqual(actual_columns, expected_columns)
 
 
+#Pruebo la division por estado
 class SetupforDataProcessing(BaseSetupforTest):
 
     def test_breakdown_date(self):

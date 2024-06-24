@@ -1,12 +1,12 @@
 # Verifico que estoy trabajando en el main
 if __name__ == "__main__":
     # Ejercicio 1.1
-    # Importo la funcion necesaria para la carga
+    # Importo la función necesaria para la carga
     from data_handling import read_csv
     # Path al arhivo
     file_path = 'Data/nics-firearm-background-checks.csv'
-    print ('Ejercicio 1.1 - Importo el dataframe\n')
-    df = read_csv(file_path) # llamada a la función de carga
+    print('Ejercicio 1.1 - Importo el dataframe\n')
+    df = read_csv(file_path)  # llamada a la función de carga
 
     # Ejercicio 1.2. Limpio los datos llamando a la funcion
     from data_handling import clean_csv
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     print()
     print('Ejercicio 1.3. Renombro columnas\n')
     df_renamed = rename_col(df_clean)
-    print (df_renamed.head(5))
+    print(df_renamed.head(5))
 
     # Ejercicio 2.1. Separo la columna fecha en year y month
     from data_processing import breakdown_date
@@ -58,7 +58,7 @@ if __name__ == "__main__":
     print('Ejercicio 3.3. Muestro valores más altos\n')
     print_biggest_longguns(df_grouped)
 
-    # Ejercicio 4.1. Analisis temporal time_evolution
+    # Ejercicio 4.1. Análisis temporal time_evolution
     from analisis_temporal import time_evolution
 
     print()
@@ -113,18 +113,10 @@ if __name__ == "__main__":
 
     manejar_outlier_kentucky(df_relative)
 
-
     # Ejercicio 6. Elaborar los mapas
     from mapas_Coropleticos import elaborar_mapas
 
     print()
     print('Ejercicio 5.5. Elaborar mapas\n')
     variables = ("permit_perc", "handgun_perc", "longgun_perc")
-    elaborar_mapas(df_relative,variables)
-
-
-
-
-
-
-
+    elaborar_mapas(df_relative, variables)

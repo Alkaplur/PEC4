@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
 
+
+# Funcion para la realizacion de series temporales
 def time_evolution(df):
     # Agrupar por año y sumar los valores de permit, hand_gun y long_gun
     df_grouped = df.groupby('year')[['permit', 'handgun', 'longgun']].sum().reset_index()

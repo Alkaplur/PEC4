@@ -1,12 +1,11 @@
 import folium
 import numpy as np
 
+
+# Funcion para elaborar los mapas
 def elaborar_mapas(df, variables):
     # Rutas
     output_dir = "/Users/davidnogueras/PycharmProjects/PEC4"
-
-    # Inicializar el mapa y almacenar en un objeto 'm'
-    m = folium.Map(location=[40, -95], zoom_start=4)
 
     url = (
         "https://raw.githubusercontent.com/python-visualization/folium/main/examples/data"
@@ -14,7 +13,7 @@ def elaborar_mapas(df, variables):
     state_geo = f"{url}/us-states.json"
 
     for variable in variables:
-        # Definir los intervalos de colores (ajustado para incluir todos los valores posibles)
+        # Definir los intervalos de colores (ya que cada variable tiene distintos valores)
         min_val = df[variable].min()
         max_val = df[variable].max()
         # Crear los umbrales incluyendo el valor mínimo y máximo

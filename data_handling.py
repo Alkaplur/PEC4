@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 # Creo la funcion para cargar los datos
 # Recibo solo el path del archivo del arhico
 def read_csv(path):

@@ -1,4 +1,7 @@
 import pandas as pd
+
+
+# Funcion para agrupar por estado
 def groupby_state(df):
 
     # Agrupar por estado y sumar los valores
@@ -12,8 +15,9 @@ def groupby_state(df):
     return df_grouped_by_state
 
 
+# Funcion para hacer la limpieza de datos
 def clean_states(df):
-    # Definir los valores que deben ser eliminados
+    # Definir los valores que deben ser eliminados ya que no contamos con datos
     values_to_remove = ["Guam", "Mariana Islands", "Puerto Rico", "Virgin Islands"]
 
     # Encontrar los índices de las filas que contienen estos valores
@@ -25,6 +29,7 @@ def clean_states(df):
     return df_cleaned
 
 
+# Funcion para combindar con datos de poblacion de US
 def merge_datasets(df):
     # Importar la función read_csv desde data_handling
     from data_handling import read_csv
@@ -40,6 +45,8 @@ def merge_datasets(df):
     print(df_merged.head(5))
     return df_merged
 
+
+# Funcion para el calculo de valores relativos
 def calculate_relative_values(df):
     # Calculo la relacion entre poblacion y long_gun
     df_relative = df.assign(
@@ -51,6 +58,8 @@ def calculate_relative_values(df):
     print(df_relative.describe())
     return df_relative
 
+
+# Funcion para manejar outlier identificado
 def manejar_outlier_kentucky(df):
     # Calcular el promedio de la columna 'permit_perc'
     global_avg_percent = df['permit_perc'].mean().round(2)
@@ -74,11 +83,3 @@ def manejar_outlier_kentucky(df):
         permite tener una vision más ajustada a la realidad de esta variable
         """
     print(respuesta)
-
-
-
-
-
-
-
-
